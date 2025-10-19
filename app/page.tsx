@@ -144,7 +144,7 @@ export default function HomePage() {
             cardH={220}
             gap={20}
             speed={0.8}
-            autoplayPxPerSec={40}
+            autoplayPxPerSec={30}
           />
         </div>
         

@@ -73,15 +73,15 @@ export function EmailCapture({
   }
   
   return (
-    <div className="max-w-md">
+    <div className="max-w-md w-full">
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={placeholder}
-            className="flex-1 px-4 py-3 rounded-lg glass text-brand-text placeholder:text-brand-text-secondary focus:outline-none focus:ring-2 focus:ring-brand-accent-indigo"
+            className="flex-1 px-4 py-3 rounded-lg glass text-brand-text placeholder:text-brand-text-secondary focus:outline-none focus:ring-2 focus:ring-brand-accent-indigo w-full"
             disabled={status === 'loading' || status === 'success'}
             aria-label="Email address"
           />
@@ -89,7 +89,7 @@ export function EmailCapture({
           <button
             type="submit"
             disabled={status === 'loading' || status === 'success'}
-            className="btn-primary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-primary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto px-6"
           >
             {status === 'loading' ? 'Sending...' : buttonText}
           </button>

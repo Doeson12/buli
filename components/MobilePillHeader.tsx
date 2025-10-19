@@ -27,7 +27,7 @@ export default function MobilePillHeader() {
       if (menuOpen) return
 
       setShowHeader(y > 120)
-    }, 16) // ~60fps
+    }, 100) // Smoother on mobile - less frequent updates
 
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)

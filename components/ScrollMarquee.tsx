@@ -25,14 +25,20 @@ export default function ScrollMarquee({
   const raf = useRef<number | null>(null)
   const [inView, setInView] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   // segment width (all original cards + gaps)
   const segment = useMemo(() => Math.max(1, items.length * (cardW + gap)), [items.length, cardW, gap])
   const repeated = useMemo(() => (items.length ? [...items, ...items, ...items, ...items] : []), [items])
 
-  // Mount detection
+  // Mount detection and mobile detection
   useEffect(() => {
     setMounted(true)
+    setIsMobile(window.innerWidth < 768)
+    
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   // pause work when off screen
@@ -65,11 +71,13 @@ export default function ScrollMarquee({
       // frame-rate independent autoplay (no hover pause - continuous motion)
       tPx += autoplayPxPerSec * dt
 
-      // one-way parallax: only add positive deltas (downward scroll)
-      const sy = window.scrollY || window.pageYOffset
-      const dy = sy - lastScrollY.current
-      if (dy > 0) scrollAccum.current += dy * speed // ignore upward motion
-      lastScrollY.current = sy
+      // Parallax effect - DISABLED on mobile to prevent scroll jank
+      if (!isMobile) {
+        const sy = window.scrollY || window.pageYOffset
+        const dy = sy - lastScrollY.current
+        if (dy > 0) scrollAccum.current += dy * speed // ignore upward motion
+        lastScrollY.current = sy
+      }
 
       // total offset (parallax + autoplay) - remove pixel snapping for smoothness
       const x = -((scrollAccum.current + tPx) % segment)
@@ -80,7 +88,7 @@ export default function ScrollMarquee({
 
     raf.current = requestAnimationFrame(frame)
     return () => { if (raf.current) cancelAnimationFrame(raf.current); raf.current = null }
-  }, [inView, autoplayPxPerSec, speed, segment])
+  }, [inView, autoplayPxPerSec, speed, segment, isMobile])
 
   // reduced motion = disable autoplay
   useEffect(() => {
@@ -122,10 +130,7 @@ export default function ScrollMarquee({
             return (
               <article
                 key={i}
-                className="group rounded-2xl bg-white/[0.05] border border-white/[0.08]
-                           transition-[border-color,box-shadow] duration-300 ease-out
-                           md:hover:border-brand-accent-teal/30
-                           md:hover:shadow-[0_0_20px_rgba(45,212,191,0.2)]"
+                className="marquee-card group rounded-2xl bg-white/[0.05] border border-white/[0.08]"
                 style={{ 
                   width: `${cardW}px`, 
                   height: `${cardH}px`, 
@@ -133,6 +138,8 @@ export default function ScrollMarquee({
                   transform: 'translate3d(0,0,0)',
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
+                  contain: 'layout style paint',
+                  willChange: 'auto',
                 }}
               >
                 
