@@ -35,6 +35,41 @@
 
 /* Light mode removed for performance and simplicity - dark mode only */
 
+/* Nav Performance Optimization - Move expensive properties to CSS */
+.nav-pill {
+  border-radius: 1.5rem;
+  isolation: isolate;
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-pill.scrolled {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  background-color: rgba(10, 10, 12, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+/* Mobile Header States */
+.mobile-header-pill {
+  border-radius: 1.5rem;
+  isolation: isolate;
+  transition: backdrop-filter 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mobile-header-pill.visible {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  background-color: rgba(10, 10, 12, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.mobile-header-pill.menu-open {
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  background-color: rgba(10, 10, 20, 0.75);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
 @layer base {
   html {
     @apply scroll-smooth overflow-x-hidden;

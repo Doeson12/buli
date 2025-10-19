@@ -72,46 +72,22 @@ export default function MobilePillHeader() {
     <motion.header
       initial={false}
       animate={{
-        backdropFilter: menuOpen
-          ? 'blur(40px) saturate(180%)'
-          : showHeader 
-            ? 'blur(24px) saturate(180%)'
-            : 'blur(0px)',
-        backgroundColor: menuOpen
-          ? 'rgba(10, 10, 20, 0.75)'
-          : showHeader
-            ? 'rgba(10, 10, 12, 0.4)'
-            : 'rgba(10, 10, 12, 0.0)',
-        borderRadius: '1.5rem',
         scale: menuOpen ? 1 : showHeader ? 1 : 1.05,
         opacity: menuOpen || showHeader ? 1 : 0.85,
         y: menuOpen || showHeader ? 0 : -6,
         height: menuOpen ? 'auto' : '3.2rem',
-        boxShadow: menuOpen 
-          ? '0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset' 
-          : showHeader 
-            ? '0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) inset' 
-            : '0 0px 0px rgba(0, 0, 0, 0)'
       }}
       transition={{
-        duration: 0.5,
+        duration: 0.4,
         ease: [0.16, 1, 0.3, 1],
         height: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-        borderRadius: { duration: 0.15, ease: [0.4, 0, 0.2, 1] },
-        scale: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-        backgroundColor: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-        backdropFilter: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-        y: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-        opacity: { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
       }}
-      className="md:hidden fixed top-3 left-0 right-0 mx-auto flex flex-col 
-                 items-center justify-start overflow-hidden"
+      className={`mobile-header-pill ${menuOpen ? 'menu-open' : showHeader ? 'visible' : ''} md:hidden fixed top-3 left-0 right-0 mx-auto flex flex-col 
+                 items-center justify-start overflow-hidden`}
       style={{
         width: '92%',
         maxWidth: '440px',
         zIndex: 100,
-        isolation: 'isolate',
-        WebkitBackdropFilter: 'blur(24px)',
       }}
     >
       {/* Header row - always visible */}

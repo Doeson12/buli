@@ -40,35 +40,18 @@ export function Nav() {
       <motion.nav
         initial={false}
         animate={{
-          backdropFilter: isScrolled ? 'blur(24px) saturate(180%)' : 'blur(0px)',
-          backgroundColor: isScrolled 
-            ? 'rgba(10, 10, 12, 0.4)' 
-            : 'rgba(10, 10, 12, 0.0)',
-          borderRadius: '1.5rem',
           scale: isScrolled ? 1 : 1.05,
           opacity: isScrolled ? 1 : 0.85,
           y: isScrolled ? 0 : -6,
-          boxShadow: isScrolled
-            ? '0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) inset'
-            : '0 0px 0px rgba(0, 0, 0, 0)'
         }}
         transition={{
-          duration: 0.5,
+          duration: 0.4,
           ease: [0.16, 1, 0.3, 1],
-          borderRadius: { duration: 0.15, ease: [0.4, 0, 0.2, 1] },
-          scale: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-          backgroundColor: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-          backdropFilter: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-          y: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-          opacity: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-          boxShadow: { duration: 0.3, ease: [0.16, 1, 0.3, 1] }
         }}
-        className="hidden md:block fixed top-4 left-0 right-0 mx-auto z-50 overflow-hidden"
+        className={`nav-pill ${isScrolled ? 'scrolled' : ''} hidden md:block fixed top-4 left-0 right-0 mx-auto z-50 overflow-hidden`}
         style={{
           width: '90%',
           maxWidth: '1200px',
-          isolation: 'isolate',
-          WebkitBackdropFilter: isScrolled ? 'blur(24px)' : 'blur(0px)',
         }}
       >
         <motion.div 
