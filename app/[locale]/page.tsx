@@ -6,6 +6,7 @@ import { EmailCapture } from '@/components/EmailCapture'
 import { AnimatedGlowDemo } from '@/components/AnimatedGlowDemo'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
 
 const features = [
   {
@@ -85,7 +86,14 @@ const faqItems = [
   },
 ]
 
-export default function LocalizedHomePage() {
+interface Props {
+  params: { locale: string }
+}
+
+export default function LocalizedHomePage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale)
+  
   const t = useTranslations()
   
   return (

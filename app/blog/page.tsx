@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { formatDate } from '@/lib/utils'
 
-// Gracefully handle contentlayer import (may not exist yet)
-let allPosts: Array<{
+// Static blog posts (Contentlayer removed for simpler deployment)
+const allPosts: Array<{
   slug: string
   url: string
   title: string
@@ -13,14 +13,6 @@ let allPosts: Array<{
   category: string
   published: boolean
 }> = []
-try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const contentlayer = require('contentlayer/generated')
-  allPosts = contentlayer.allPosts || []
-} catch {
-  // Contentlayer not built yet, use empty array
-  console.log('Contentlayer not built yet - showing empty blog page')
-}
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -52,18 +44,18 @@ export default function BlogPage() {
           </p>
         </div>
         
-        {/* Category filters (visual only for now, can add filtering logic) */}
+        {/* Category filters (visual only for now) */}
         <div className="flex flex-wrap gap-3 justify-center mb-12">
-          <button className="px-4 py-2 rounded-full glass hover:bg-white/10 text-sm font-medium transition-all">
+          <div className="px-4 py-2 rounded-full glass text-sm font-medium">
             All Posts
-          </button>
+          </div>
           {categories.map((category) => (
-            <button
+            <div
               key={category}
-              className="px-4 py-2 rounded-full glass hover:bg-white/10 text-sm font-medium transition-all"
+              className="px-4 py-2 rounded-full glass text-sm font-medium opacity-60"
             >
               {category}
-            </button>
+            </div>
           ))}
         </div>
         
