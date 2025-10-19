@@ -1,15 +1,6 @@
-import type { Metadata } from 'next'
-import { trackEvent } from '@/lib/analytics'
-import { EmailCapture } from '@/components/EmailCapture'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Community',
-  description: 'Join the Buli community on Discord, follow us on social media, and subscribe to our newsletter.',
-  openGraph: {
-    title: 'Buli Community',
-    description: 'Connect with lifters, share progress, and stay updated.',
-  },
-}
+import { EmailCapture } from '@/components/EmailCapture'
 
 export default function CommunityPage() {
   return (
@@ -37,7 +28,6 @@ export default function CommunityPage() {
               href={process.env.NEXT_PUBLIC_DISCORD_URL || 'https://discord.gg/yourcode'}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent('discord_join_click', { context: 'community' })}
               className="btn-primary inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
