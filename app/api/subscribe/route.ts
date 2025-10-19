@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 /**
  * Email subscription endpoint
@@ -37,7 +38,7 @@ export async function POST(request: NextRequest) {
       }
     }
     
-    // Send confirmation email via Resend
+    // Send confirmation email via Resend (if configured)
     if (resend) {
       const subject = context === 'android_waitlist' 
         ? 'You\'re on the Buli Android waitlist!'
@@ -47,13 +48,13 @@ export async function POST(request: NextRequest) {
         ? `
           <h1>Thanks for joining the Android waitlist!</h1>
           <p>We'll notify you as soon as Buli launches on Android.</p>
-          <p>In the meantime, check out our <a href="${process.env.NEXT_PUBLIC_SITE_URL}/blog">blog</a> for training tips.</p>
+          <p>In the meantime, check out our <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://buli.app'}/blog">blog</a> for training tips.</p>
           <p>- The Buli Team</p>
         `
         : `
           <h1>Welcome to the Buli community!</h1>
           <p>You'll receive monthly training guides, science breakdowns, and product updates.</p>
-          <p>Start training today: <a href="${process.env.NEXT_PUBLIC_SITE_URL}/download">Download Buli</a></p>
+          <p>Start training today: <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://buli.app'}/download">Download Buli</a></p>
           <p>- The Buli Team</p>
         `
       
@@ -63,6 +64,9 @@ export async function POST(request: NextRequest) {
         subject,
         html: htmlContent,
       })
+    } else {
+      // Log the subscription (in production, you'd save this to a database)
+      console.log('Email subscription (Resend not configured):', { email, context })
     }
     
     return NextResponse.json({

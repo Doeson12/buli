@@ -50,10 +50,6 @@ export function ImportProgramAnimation() {
     <section 
       ref={ref} 
       className="py-32 md:py-40 relative overflow-hidden"
-      style={{
-        willChange: isInView ? 'transform' : 'auto',
-        contain: 'layout style paint',
-      }}
     >
       <div className="container-custom">
         <div className="max-w-7xl mx-auto">

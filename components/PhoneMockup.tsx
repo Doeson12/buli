@@ -97,10 +97,6 @@ const PhoneMockup = memo(function PhoneMockup({
   return (
     <div 
       className={`${containerClasses} ${className}`}
-      style={{
-        willChange: 'transform',
-        contain: 'layout style paint',
-      }}
     >
       {/* Phone mockup container */}
       <motion.div

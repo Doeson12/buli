@@ -107,11 +107,14 @@ export default function ScrollMarquee({
       <div className="absolute inset-0 flex items-center py-2">
         <div
           ref={beltRef}
-          className="flex will-change-transform transform-gpu overflow-visible [contain:layout_paint]"
+          className="flex will-change-transform overflow-visible"
           style={{ 
             gap: `${gap}px`,
             opacity: mounted ? 1 : 0,
-            transition: 'opacity 0.3s ease-in-out'
+            transition: 'opacity 0.3s ease-in-out',
+            transform: 'translate3d(0,0,0)',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
           }}
         >
           {repeated.map((it, i) => {
@@ -119,20 +122,25 @@ export default function ScrollMarquee({
             return (
               <article
                 key={i}
-                className="group rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.08]
-                           transition-all duration-500 
+                className="group rounded-2xl bg-white/[0.05] border border-white/[0.08]
+                           transition-[border-color,box-shadow] duration-300 ease-out
                            md:hover:border-brand-accent-teal/30
-                           md:hover:shadow-[0_0_20px_rgba(45,212,191,0.2)]
-                           transform-gpu"
-                style={{ width: `${cardW}px`, height: `${cardH}px`, minWidth: `${cardW}px` }}
+                           md:hover:shadow-[0_0_20px_rgba(45,212,191,0.2)]"
+                style={{ 
+                  width: `${cardW}px`, 
+                  height: `${cardH}px`, 
+                  minWidth: `${cardW}px`,
+                  transform: 'translate3d(0,0,0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                }}
               >
                 
                 {/* Content */}
                 <div className="relative h-full p-6 flex flex-col gap-3">
                   {Icon && (
                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-brand-accent-teal/10 text-brand-accent-teal
-                                    transition-all duration-300">
+                                    bg-brand-accent-teal/10 text-brand-accent-teal">
                       <Icon size={20} />
                     </div>
                   )}

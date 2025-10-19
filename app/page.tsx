@@ -143,8 +143,8 @@ export default function HomePage() {
             cardW={340}
             cardH={220}
             gap={20}
-            speed={1.2}
-            autoplayPxPerSec={60}
+            speed={0.8}
+            autoplayPxPerSec={40}
           />
         </div>
         
