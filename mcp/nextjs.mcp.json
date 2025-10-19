@@ -1,0 +1,45 @@
+{
+  "name": "buli-nextjs-project",
+  "description": "MCP configuration for Buli Next.js website project",
+  "version": "1.0.0",
+  "rules": [
+    "This is a Next.js 13+ project using the App Router",
+    "Use TypeScript for all new files",
+    "Follow Tailwind CSS for styling with mobile-first approach",
+    "Use Framer Motion for animations and transitions",
+    "Implement internationalization with next-intl",
+    "Follow accessibility best practices (WCAG 2.1 AA)",
+    "Use semantic HTML elements and proper ARIA labels",
+    "Implement responsive design for mobile, tablet, and desktop",
+    "Use Next.js Image component for optimized images",
+    "Follow Next.js best practices for performance optimization",
+    "Use proper error boundaries and loading states",
+    "Implement proper SEO with Next.js metadata API",
+    "Use proper TypeScript types and interfaces",
+    "Follow the existing component structure and patterns",
+    "Use clsx for conditional class names",
+    "Implement proper form validation and error handling"
+  ],
+  "context": {
+    "projectType": "Next.js 13+ App Router",
+    "styling": "Tailwind CSS",
+    "animations": "Framer Motion",
+    "i18n": "next-intl",
+    "testing": "Playwright + Vitest",
+    "deployment": "Netlify",
+    "keyDirectories": [
+      "app/ - Next.js App Router pages and layouts",
+      "components/ - Reusable React components",
+      "lib/ - Utility functions and configurations",
+      "content/ - MDX blog content",
+      "public/ - Static assets",
+      "styles/ - Global CSS and Tailwind config"
+    ],
+    "keyFiles": [
+      "next.config.js - Next.js configuration",
+      "tailwind.config.ts - Tailwind CSS configuration",
+      "middleware.ts - Next.js middleware for i18n",
+      "contentlayer.config.ts - MDX content configuration"
+    ]
+  }
+}

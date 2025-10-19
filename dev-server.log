@@ -1,0 +1,195 @@
+
+> buli-site@1.0.0 dev
+> next dev
+
+Contentlayer config change detected. Updating type definitions and data...
+Contentlayer (Warning): Importing from `contentlayer/generated` might not work.
+Config option `compilerOptions.baseUrl` not found in "tsconfig.json".
+
+For more information see https://www.contentlayer.dev/docs/getting-started
+To disable this warning you can set `disableImportAliasWarning: true` in your Contentlayer config.
+
+Contentlayer (Warning): Importing from `contentlayer/generated` might not work.
+Config option `compilerOptions.baseUrl` not found in "tsconfig.json".
+
+For more information see https://www.contentlayer.dev/docs/getting-started
+To disable this warning you can set `disableImportAliasWarning: true` in your Contentlayer config.
+
+Generated 2 documents in .contentlayer
+  ▲ Next.js 13.5.11
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use at your own risk):
+     · optimizeCss
+
+ ✓ Ready in 3s
+(node:97463) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ⨯ ./styles/globals.css:97:5
+Syntax error: /Users/john/buli/website/styles/globals.css The `hover:bg-white/8` class does not exist. If `hover:bg-white/8` is a custom class, make sure it is defined within a `@layer` directive.
+
+  95 |   /* Card styles */
+  96 |   .card {
+> 97 |     @apply glass rounded-2xl p-6 transition-all duration-300 
+     |     ^
+  98 |            hover:bg-white/8 hover:border-white/20;
+  99 |   }
+ ○ Compiling /_error ...
+ ⨯ ./styles/globals.css:97:5
+Syntax error: /Users/john/buli/website/styles/globals.css The `hover:bg-white/8` class does not exist. If `hover:bg-white/8` is a custom class, make sure it is defined within a `@layer` directive.
+
+  95 |   /* Card styles */
+  96 |   .card {
+> 97 |     @apply glass rounded-2xl p-6 transition-all duration-300 
+     |     ^
+  98 |            hover:bg-white/8 hover:border-white/20;
+  99 |   }
+ ⨯ Error: Cannot find module 'critters'
+Require stack:
+- /Users/john/buli/website/node_modules/next/dist/server/post-process.js
+- /Users/john/buli/website/node_modules/next/dist/server/render.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js
+- /Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js
+- /Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js
+- /Users/john/buli/website/node_modules/next/dist/server/next.js
+- /Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js
+    at Function.call (node:internal/modules/cjs/loader:1405:15)
+    at /Users/john/buli/website/node_modules/next/src/server/require-hook.ts:50:34
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.call (node:internal/modules/cjs/loader:1491:12)
+    at Module.mod.require (/Users/john/buli/website/node_modules/next/src/server/require-hook.ts:69:26)
+    at require (node:internal/modules/helpers:135:16)
+    at postProcessor (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:235:28)
+    at postProcessHTML (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:257:23)
+    at renderToHTMLImpl (/Users/john/buli/website/node_modules/next/src/server/render.tsx:1571:25)
+    at doRender (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2130:18)
+    at cacheEntry.responseCache.get.incrementalCache.incrementalCache (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2389:24)
+    at DevServer.renderToResponseWithComponentsImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2266:24)
+    at DevServer.renderToResponseImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2733:24)
+    at DevServer.pipeImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:1435:21)
+    at DevServer.handleCatchallRenderRequest (/Users/john/buli/website/node_modules/next/src/server/next-server.ts:922:7)
+    at DevServer.handleRequestImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:1274:9) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/john/buli/website/node_modules/next/dist/server/post-process.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/render.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/next.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+Error: Cannot find module 'critters'
+Require stack:
+- /Users/john/buli/website/node_modules/next/dist/server/post-process.js
+- /Users/john/buli/website/node_modules/next/dist/server/render.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js
+- /Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js
+- /Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js
+- /Users/john/buli/website/node_modules/next/dist/server/next.js
+- /Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js
+    at Function.call (node:internal/modules/cjs/loader:1405:15)
+    at /Users/john/buli/website/node_modules/next/src/server/require-hook.ts:50:34
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.call (node:internal/modules/cjs/loader:1491:12)
+    at Module.mod.require (/Users/john/buli/website/node_modules/next/src/server/require-hook.ts:69:26)
+    at require (node:internal/modules/helpers:135:16)
+    at postProcessor (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:235:28)
+    at postProcessHTML (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:257:23)
+    at renderToHTMLImpl (/Users/john/buli/website/node_modules/next/src/server/render.tsx:1571:25)
+    at doRender (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2130:18)
+    at cacheEntry.responseCache.get.incrementalCache.incrementalCache (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2389:24)
+    at DevServer.renderToResponseWithComponentsImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2266:24)
+    at DevServer.renderToResponseImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2733:24)
+    at DevServer.pipeImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:1435:21)
+    at DevServer.handleCatchallRenderRequest (/Users/john/buli/website/node_modules/next/src/server/next-server.ts:922:7)
+    at DevServer.handleRequestImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:1274:9) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/john/buli/website/node_modules/next/dist/server/post-process.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/render.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/next.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+Error: Cannot find module 'critters'
+Require stack:
+- /Users/john/buli/website/node_modules/next/dist/server/post-process.js
+- /Users/john/buli/website/node_modules/next/dist/server/render.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js
+- /Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js
+- /Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js
+- /Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js
+- /Users/john/buli/website/node_modules/next/dist/server/next.js
+- /Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js
+    at Function.call (node:internal/modules/cjs/loader:1405:15)
+    at /Users/john/buli/website/node_modules/next/src/server/require-hook.ts:50:34
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.call (node:internal/modules/cjs/loader:1491:12)
+    at Module.mod.require (/Users/john/buli/website/node_modules/next/src/server/require-hook.ts:69:26)
+    at require (node:internal/modules/helpers:135:16)
+    at postProcessor (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:235:28)
+    at postProcessHTML (/Users/john/buli/website/node_modules/next/src/server/post-process.ts:257:23)
+    at renderToHTMLImpl (/Users/john/buli/website/node_modules/next/src/server/render.tsx:1571:25)
+    at doRender (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2130:18)
+    at cacheEntry.responseCache.get.incrementalCache.incrementalCache (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2389:24)
+    at DevServer.renderToResponseWithComponentsImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2266:24)
+    at pipe.req.req (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:2815:26)
+    at DevServer.pipeImpl (/Users/john/buli/website/node_modules/next/src/server/base-server.ts:1435:21) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/john/buli/website/node_modules/next/dist/server/post-process.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/render.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/module.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/future/route-modules/pages/builtin/_error.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/load-default-error-components.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/dev/next-dev-server.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/next.js',
+    '/Users/john/buli/website/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/john/buli/website/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!/Users/john/buli/website/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!/Users/john/buli/website/styles/globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+Contentlayer config change detected. Updating type definitions and data...
+Contentlayer (Warning): Importing from `contentlayer/generated` might not work.
+Config option `compilerOptions.baseUrl` not found in "tsconfig.json".
+
+For more information see https://www.contentlayer.dev/docs/getting-started
+To disable this warning you can set `disableImportAliasWarning: true` in your Contentlayer config.
+
+Contentlayer (Warning): Importing from `contentlayer/generated` might not work.
+Config option `compilerOptions.baseUrl` not found in "tsconfig.json".
+
+For more information see https://www.contentlayer.dev/docs/getting-started
+To disable this warning you can set `disableImportAliasWarning: true` in your Contentlayer config.
+
+Generated 2 documents in .contentlayer
+  ▲ Next.js 13.5.11
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use at your own risk):
+     · optimizeCss
+
+ ✓ Ready in 2.5s
+[?25h

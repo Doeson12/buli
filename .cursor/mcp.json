@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "buli-nextjs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    }
+  }
+}

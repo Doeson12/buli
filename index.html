@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buli - Your AI-Powered Gym Training Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">💪</div>
+                <span class="logo-text">Buli</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#download" class="nav-link cta-nav">Download</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Transform Your</span>
+                    <span class="title-line highlight">Gym Training</span>
+                    <span class="title-line">With AI</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Buli creates personalized workout plans that adapt to you. 
+                    Track progress, smash goals, and build the body you want with 
+                    intelligent progressive overload.
+                </p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary pulse">
+                        <span>Download Now</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3V17M10 17L4 11M10 17L16 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">+ Exercises</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Personalized</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <div class="preview-header">
+                                    <div class="preview-time">9:41</div>
+                                    <div class="preview-icons">
+                                        <div class="icon-bar"></div>
+                                        <div class="icon-bar"></div>
+                                        <div class="icon-bar"></div>
+                                    </div>
+                                </div>
+                                <div class="preview-content">
+                                    <h2 class="preview-title">Today's Workout</h2>
+                                    <div class="workout-card">
+                                        <div class="workout-header">
+                                            <span class="workout-name">Chest & Triceps</span>
+                                            <span class="workout-duration">45 min</span>
+                                        </div>
+                                        <div class="exercise-list">
+                                            <div class="exercise-item">
+                                                <div class="exercise-icon">🏋️</div>
+                                                <div class="exercise-details">
+                                                    <div class="exercise-name">Bench Press</div>
+                                                    <div class="exercise-sets">3 sets × 8-10 reps</div>
+                                                </div>
+                                                <div class="exercise-check">✓</div>
+                                            </div>
+                                            <div class="exercise-item">
+                                                <div class="exercise-icon">💪</div>
+                                                <div class="exercise-details">
+                                                    <div class="exercise-name">Incline Dumbbell Press</div>
+                                                    <div class="exercise-sets">3 sets × 10-12 reps</div>
+                                                </div>
+                                                <div class="exercise-check">○</div>
+                                            </div>
+                                            <div class="exercise-item">
+                                                <div class="exercise-icon">🔥</div>
+                                                <div class="exercise-details">
+                                                    <div class="exercise-name">Tricep Dips</div>
+                                                    <div class="exercise-sets">3 sets × 12-15 reps</div>
+                                                </div>
+                                                <div class="exercise-check">○</div>
+                                            </div>
+                                        </div>
+                                        <button class="start-workout-btn">Start Workout →</button>
+                                    </div>
+                                    <div class="progress-card">
+                                        <h3 class="card-title">Weekly Progress</h3>
+                                        <div class="progress-bars">
+                                            <div class="progress-item">
+                                                <span>Mon</span>
+                                                <div class="bar active"></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>Tue</span>
+                                                <div class="bar"></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>Wed</span>
+                                                <div class="bar active"></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>Thu</span>
+                                                <div class="bar"></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>Fri</span>
+                                                <div class="bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to reach your fitness goals</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient1)"/>
+                            <path d="M24 16L28 20L32 16M24 16V30M24 16L20 20M24 16L16 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#667eea"/>
+                                    <stop offset="1" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI-Powered Plans</h3>
+                    <p class="feature-description">
+                        Get a completely personalized workout plan generated by AI based on your goals, 
+                        experience level, and equipment availability.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient2)"/>
+                            <circle cx="24" cy="20" r="6" stroke="white" stroke-width="2"/>
+                            <path d="M16 32C16 28 20 26 24 26C28 26 32 28 32 32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#f093fb"/>
+                                    <stop offset="1" stop-color="#f5576c"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Progressive Overload</h3>
+                    <p class="feature-description">
+                        Intelligent weight and rep recommendations that adapt based on your performance, 
+                        ensuring consistent progress without overtraining.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient3)"/>
+                            <path d="M12 24L20 32L36 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#4facfe"/>
+                                    <stop offset="1" stop-color="#00f2fe"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">150+ Exercises</h3>
+                    <p class="feature-description">
+                        Comprehensive exercise library with detailed instructions for every muscle group. 
+                        Filter by equipment and target area.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient4)"/>
+                            <path d="M24 12V24L30 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="24" cy="24" r="10" stroke="white" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient4" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#43e97b"/>
+                                    <stop offset="1" stop-color="#38f9d7"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Real-Time Tracking</h3>
+                    <p class="feature-description">
+                        Log your sets, reps, and weights in real-time during your workout. 
+                        Track RPE (Rate of Perceived Exertion) for optimal progression.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient5)"/>
+                            <path d="M16 30L22 24L26 28L32 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient5" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#fa709a"/>
+                                    <stop offset="1" stop-color="#fee140"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Progress Analytics</h3>
+                    <p class="feature-description">
+                        Beautiful charts and insights showing your strength gains, volume trends, 
+                        and workout consistency over time.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="url(#gradient6)"/>
+                            <path d="M18 24C18 20.6863 20.6863 18 24 18C27.3137 18 30 20.6863 30 24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M24 24V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient6" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#ff6b6b"/>
+                                    <stop offset="1" stop-color="#ee5a6f"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Deloads</h3>
+                    <p class="feature-description">
+                        Automatic deload weeks and recovery periods to prevent burnout and 
+                        maintain long-term progress.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Start your fitness journey in 3 simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Answer Questions</h3>
+                        <p class="step-description">
+                            Tell us about your fitness goals, experience level, available equipment, 
+                            and preferred training days. Our AI will understand your unique needs.
+                        </p>
+                        <div class="step-features">
+                            <span class="tag">Goal Setting</span>
+                            <span class="tag">Experience Level</span>
+                            <span class="tag">Equipment</span>
+                            <span class="tag">Schedule</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="form-mockup">
+                                <div class="form-field"></div>
+                                <div class="form-field short"></div>
+                                <div class="form-field"></div>
+                                <div class="form-buttons">
+                                    <div class="form-button"></div>
+                                    <div class="form-button active"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step reverse" data-aos="fade-left">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Your Plan</h3>
+                        <p class="step-description">
+                            Receive a fully personalized workout program designed specifically for you. 
+                            Preview your weekly schedule and exercise selection.
+                        </p>
+                        <div class="step-features">
+                            <span class="tag">Personalized</span>
+                            <span class="tag">Balanced</span>
+                            <span class="tag">Evidence-Based</span>
+                            <span class="tag">Adaptive</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="plan-mockup">
+                                <div class="plan-day">
+                                    <div class="day-label"></div>
+                                    <div class="day-workout"></div>
+                                </div>
+                                <div class="plan-day">
+                                    <div class="day-label"></div>
+                                    <div class="day-workout"></div>
+                                </div>
+                                <div class="plan-day">
+                                    <div class="day-label"></div>
+                                    <div class="day-workout"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Track & Progress</h3>
+                        <p class="step-description">
+                            Log your workouts in real-time. The app automatically calculates your next 
+                            weights and reps based on your performance. Watch yourself get stronger!
+                        </p>
+                        <div class="step-features">
+                            <span class="tag">Real-Time Logging</span>
+                            <span class="tag">Auto Progression</span>
+                            <span class="tag">Analytics</span>
+                            <span class="tag">History</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="chart-mockup">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 55%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text" data-aos="fade-right">
+                    <h2 class="section-title">Why Choose Buli?</h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>No Guesswork</h4>
+                                <p>AI-powered recommendations eliminate confusion about weight and rep selection</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Proven System</h4>
+                                <p>Based on scientific principles of progressive overload and periodization</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Prevent Injuries</h4>
+                                <p>Built-in input validation and smart deload weeks keep you training safely</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Stay Motivated</h4>
+                                <p>Visual progress tracking and streak systems keep you engaged and consistent</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Multi-Language</h4>
+                                <p>Available in English, Finnish, and Swedish with more languages coming</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>100% Free</h4>
+                                <p>All features available at no cost. No subscriptions, no hidden fees</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual" data-aos="fade-left">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📈</div>
+                        <div class="card-stat">+47%</div>
+                        <div class="card-label">Strength Increase</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🔥</div>
+                        <div class="card-stat">28</div>
+                        <div class="card-label">Day Streak</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">💪</div>
+                        <div class="card-stat">142</div>
+                        <div class="card-label">Workouts Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content" data-aos="zoom-in">
+                <h2 class="download-title">Ready to Transform Your Training?</h2>
+                <p class="download-subtitle">
+                    Download Buli now and start your journey to a stronger, healthier you.
+                </p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn apple">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M25.8 17.6c0-3.6 2.9-5.3 3-5.4-1.6-2.4-4.2-2.7-5.1-2.7-2.1-.2-4.2 1.3-5.3 1.3s-2.8-1.3-4.6-1.2c-2.4 0-4.6 1.4-5.8 3.5-2.5 4.3-.6 10.7 1.8 14.2 1.2 1.7 2.6 3.6 4.4 3.5 1.8-.1 2.5-1.1 4.6-1.1s2.7 1.1 4.6 1.1c1.9-.1 3.1-1.7 4.2-3.4 1.4-2 2-3.9 2-4 0-.1-3.9-1.5-3.9-5.8zM21.6 7.4c1-1.2 1.6-2.9 1.4-4.6-1.4.1-3.1.9-4.1 2.1-.9 1-1.7 2.7-1.5 4.3 1.6.1 3.2-.8 4.2-1.8z"/>
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-label">Download on the</span>
+                            <span class="btn-store">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn google">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M3 3.7v24.6c0 .4.2.7.5.9l13-13L3.5 2.8c-.3.2-.5.5-.5.9zm14.5 10.8l3.4 3.4-9.4 5.4 6-8.8zm4.6-11.8L13 7.5l-2.3-2.3L19.1 1c.5-.3 1.1-.2 1.5.2.2.2.3.4.3.7v.8zm0 18.6V26c0 .3-.1.5-.3.7-.4.4-1 .5-1.5.2l-8.4-4.8 2.3-2.3 8-.9z"/>
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-label">Get it on</span>
+                            <span class="btn-store">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="download-note">
+                    <p>🎉 100% Free • No Subscriptions • No Ads • Available on iOS & Android</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">💪</div>
+                        <span class="logo-text">Buli</span>
+                    </div>
+                    <p class="footer-tagline">Your AI-powered gym training companion</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Buli. All rights reserved. Built with ❤️ for fitness enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
